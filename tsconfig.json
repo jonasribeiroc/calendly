@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      /* Ambiente de destino e módulos */
+      "target": "ES5",
+      "module": "ESNext",
+  
+      /* React */
+      "jsx": "react",
+  
+      /* Diretivas de checagem e compatibilidade */
+      "strict": true,
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules"]
+  }
