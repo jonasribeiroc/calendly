@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CalendarTimes Component matches the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-fAUdSK joDQZj"
+  >
+    <div
+      class="sc-gtLWhw sc-dntaoT jqmGMn clCmLo"
+    >
+      Monday, April 15
+    </div>
+    <div
+      class="sc-blHHSb sc-ivxoEo ghtxbL izTEag"
+    >
+      <div
+        class="sc-egkSDF sc-ghWlax ljSLWe bfpDIU"
+      >
+        <button
+          class="sc-kLhKbu WUnJX"
+        >
+          07:00 AM
+        </button>
+      </div>
+      <div
+        class="sc-egkSDF sc-ghWlax ljSLWe bfpDIU"
+      >
+        <button
+          class="sc-kLhKbu WUnJX"
+        >
+          11:00 AM
+        </button>
+      </div>
+      <div
+        class="sc-egkSDF sc-ghWlax ljSLWe bfpDIU"
+      >
+        <button
+          class="sc-kLhKbu WUnJX"
+        >
+          01:30 PM
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
