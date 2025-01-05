@@ -81,7 +81,7 @@ function getMonthDay(date: Date): number {
 }
 
 function getTime(date: Date): string {
-    return format(date, 'hh:mm');
+    return format(date, 'HH:mm');
 }
 
 function getFirstDayOfMonth(date: Date): Date {
