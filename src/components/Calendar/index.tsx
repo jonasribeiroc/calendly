@@ -33,7 +33,7 @@ export const Calendar: React.FC<CalendarProps> = ({
 }) => {
     const isSelectedDate = !!selectedDate;
     const availableDays = getAvailableDays(availableDateTimes, month);
-    const availableTimes = isSelectedDate ? getAvailableTimes(selectedDate, availableDateTimes) : [];
+    const availableTimes = isSelectedDate ? getAvailableTimes(availableDateTimes,selectedDate) : [];
 
     return (
         <CalendarContainer>

@@ -92,9 +92,9 @@ function getAvailableDays(availableDateTimes: string[], date: Date): number[] {
     return Array.from(daysSet).sort((a, b) => a - b);
 }
 
-function getAvailableTimes(date: Date, isoStrings: string[]): Date[] {
-    return isoStrings
-        .map(isoStr => parseISO(isoStr))
+function getAvailableTimes(availableDateTimes: string[], date: Date): Date[] {
+    return availableDateTimes
+        .map(dateTime => parseISO(dateTime))
         .filter(d => isSameDay(d, date))
 }
 
