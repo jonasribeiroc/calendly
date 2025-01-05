@@ -1,19 +1,16 @@
 {
     "compilerOptions": {
-      /* Ambiente de destino e módulos */
       "target": "ES5",
       "module": "ESNext",
-  
-      /* React */
       "jsx": "react",
-  
-      /* Diretivas de checagem e compatibilidade */
       "strict": true,
       "moduleResolution": "node",
       "esModuleInterop": true,
       "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true
+      "forceConsistentCasingInFileNames": true,
+      "resolveJsonModule": true,
+      "types": ["jest", "node"]
     },
-    "include": ["src/**/*"],
+    "include": ["src/**/*", "jest.config.ts", "jest.setup.ts", "src/**/*.ts", "src/**/*.tsx"],
     "exclude": ["node_modules"]
   }
