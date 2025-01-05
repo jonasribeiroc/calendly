@@ -12,6 +12,9 @@ const config: Config = {
     },
     testMatch: ['<rootDir>/src/**/*.test.(ts|tsx)'],
     moduleDirectories: ['node_modules', 'src'],
+    coveragePathIgnorePatterns: [
+        "/src/services/"
+    ],
     testEnvironmentOptions: {
         timezone: 'UTC',
     },
