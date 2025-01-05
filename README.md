@@ -1,6 +1,6 @@
 # Calendly App
 
-## Descrição
+## Description
 
 Calendly is an online scheduling platform designed to simplify the booking of meetings, events, and appointments without the need for unnecessary messages or emails.
 
