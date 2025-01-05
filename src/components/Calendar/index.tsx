@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { getAvailableDays, getAvailableTimes } from '../../utils';
+import { getAvailableDays, getAvailableTimes } from '../../utils/dateUtils';
 import { Column } from '../Column';
 import { CalendarMonthPicker } from './CalendarMonthPicker';
 import { CalendarWeekDays } from './CalendarWeekDays';

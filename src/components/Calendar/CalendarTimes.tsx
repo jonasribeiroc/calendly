@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { getDay, getMonthName, getTime, getWeekDayName } from '../../utils';
+import { getMonthDay, getMonthName, getTime, getWeekDayName } from '../../utils/dateUtils';
 import { Column } from '../Column';
 import { Text } from '../Text';
 import { Row } from '../Row';
@@ -102,7 +102,7 @@ export const CalendarTimes: React.FC<CalendarTimesProps> = ({
     return (
         <CalendarTimesContainer>
             <CalendarTimesTitle>
-                {getWeekDayName(selectedDate)}, {getMonthName(selectedDate)} {getDay(selectedDate)}
+                {getWeekDayName(selectedDate)}, {getMonthName(selectedDate)} {getMonthDay(selectedDate)}
             </CalendarTimesTitle>
 
             <CalendarTimesColumn>

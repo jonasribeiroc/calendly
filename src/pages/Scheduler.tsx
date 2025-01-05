@@ -15,14 +15,14 @@ const Scheduler: React.FC = () => {
 
     return (
         <Layout title='Select a Date & Time' isExpanded={!!date}>
-            <Calendar
+            {month ? (<Calendar
                 month={month}
                 selectedDate={date}
                 availableDateTimes={availableDateTimes}
                 onClickDay={onClickDay}
                 onClickTime={onClickTime}
                 onChangeMonth={onChangeMonth}
-            />
+            />) : null}
         </Layout>
     );
 }

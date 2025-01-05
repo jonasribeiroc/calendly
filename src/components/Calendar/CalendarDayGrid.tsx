@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { getDay, getFirstDayOfMonth, getMonthDays, getWeekDay } from '../../utils';
+import { getMonthDay, getFirstDayOfMonth, getMonthDays, getWeekDay } from '../../utils/dateUtils';
 
 const DayGrid = styled.div`
     display: grid;
@@ -42,7 +42,7 @@ const DayCell = styled.button<DayCellProps>`
 interface CalendarDayGridProps {
     month: Date,
     selectedDate?: Date,
-    availableDays: number[]
+    availableDays: Date[]
     onClick: (date: Date) => void
 }
 
@@ -52,7 +52,7 @@ export const CalendarDayGrid: React.FC<CalendarDayGridProps> = ({
     availableDays,
     onClick,
 }) => {
-    const selectedDay = !!selectedDate ? getDay(selectedDate) : undefined;
+    const selectedDay = !!selectedDate ? getMonthDay(selectedDate) : undefined;
     const dayWeekIndex = getWeekDay(getFirstDayOfMonth(month));
     const monthDays = getMonthDays(month);
     const cells = Array.from({ length: 42 }).map((_, index) => {
@@ -60,24 +60,21 @@ export const CalendarDayGrid: React.FC<CalendarDayGridProps> = ({
         return dayWeekNumber > 0 && dayWeekNumber <= monthDays ? dayWeekNumber : undefined;
     });
 
-    const handleClick = (day: number) => {
-        const newDate = new Date(month.getTime());
-        newDate.setDate(day);
-        onClick(newDate);
-    };
-
     return (
         <DayGrid>
-            {cells.map((day, i) => (
-                <DayCell
-                    key={i}
-                    disabled={!day || !availableDays.includes(day) || day === selectedDay}
-                    onClick={() => day && handleClick(day)}
-                    $isSelected={!!selectedDay && day === selectedDay}
-                >
-                    {day}
-                </DayCell>
-            ))}
+            {cells.map((day, i) => {
+                const date = availableDays.find((date) => getMonthDay(date) === day);
+                return (
+                    <DayCell
+                        key={i}
+                        disabled={!day || !date || day === selectedDay}
+                        onClick={() => date && onClick(date)}
+                        $isSelected={!!selectedDay && selectedDay === day}
+                    >
+                        {day}
+                    </DayCell>
+                )
+            })}
         </DayGrid>
     );
 }

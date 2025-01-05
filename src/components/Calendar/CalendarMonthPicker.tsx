@@ -1,7 +1,7 @@
 import React from 'react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import styled from 'styled-components';
-import { getMonthName, getNextMonth, getPreviousMonth, getYear } from '../../utils';
+import { getMonthName, getNextMonth, getPreviousMonth, getYear } from '../../utils/dateUtils';
 
 const CalendarMonthPickerContainer = styled.div`
     display: flex;

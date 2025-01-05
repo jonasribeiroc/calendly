@@ -5,6 +5,7 @@ import Layout from '../components/Layout';
 import InputField from '../components/Form/InputField';
 import { useForm } from '../hooks/useForm';
 import { postSchedule } from '../services/postSchedule';
+import { getDateUTC } from '../utils/dateUtils';
 import Toast from '../components/Toast';
 
 interface ScheduleEventFormData {
@@ -50,7 +51,7 @@ const ScheduleEvent: React.FC = () => {
             setToastMessage(`
                 Created successfully!
                 ID: ${response.id}
-                Date: ${new Date(response.date)}
+                Date: ${getDateUTC(response.date)}
                 Name: ${response.name}
                 Email: ${response.email}`
             )
