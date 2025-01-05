@@ -1,7 +1,7 @@
 import React from 'react';
 import { Calendar } from '../components';
 import { useCalendar } from '../hooks/useCalendar';
-import Layout from '../components/Layout';
+import { Layout } from '../components';
 
 const Scheduler: React.FC = () => {
     const {
