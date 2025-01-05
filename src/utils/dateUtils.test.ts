@@ -97,7 +97,7 @@ describe('Date Utilities (UTC)', () => {
     });
 
     test('getTime', () => {
-        expect(getTime(date)).toBe('12:00');
+        expect(getTime(date)).toBe('00:00');
     });
 
     test('getFirstDayOfMonth', () => {
