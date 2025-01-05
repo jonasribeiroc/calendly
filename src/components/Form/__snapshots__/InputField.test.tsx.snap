@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputField Component matches the snapshot with error 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-egkSDF gifMPI"
+  >
+    <label
+      class="sc-blHHSb xrmhh"
+      for="test-input"
+    >
+      Test Label
+    </label>
+    <input
+      class="sc-fAUdSK bfpGeu"
+      id="test-input"
+      placeholder=""
+      type="text"
+      value="Test Value"
+    />
+    <span
+      class="sc-dntaoT eDtpMW"
+    >
+      This field is required
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InputField Component matches the snapshot without error 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-egkSDF gifMPI"
+  >
+    <label
+      class="sc-blHHSb xrmhh"
+      for="test-input"
+    >
+      Test Label
+    </label>
+    <input
+      class="sc-fAUdSK jNbDYC"
+      id="test-input"
+      placeholder="Enter text"
+      type="text"
+      value="Test Value"
+    />
+  </div>
+</DocumentFragment>
+`;
