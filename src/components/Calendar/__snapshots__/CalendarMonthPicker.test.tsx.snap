@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CalendarMonthPicker Component matches the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-blHHSb fJKPUX"
+  >
+    <button
+      aria-label="previous month"
+      class="sc-gtLWhw sc-egkSDF leTCF fBSbpZ"
+    >
+      <div
+        data-testid="fi-chevron-left"
+      />
+    </button>
+    <span
+      class="sc-dntaoT YAjMN"
+    >
+      April 2025
+    </span>
+    <button
+      aria-label="next month"
+      class="sc-gtLWhw sc-fAUdSK leTCF gofhhg"
+    >
+      <div
+        data-testid="fi-chevron-right"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;
