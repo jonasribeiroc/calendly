@@ -11,6 +11,7 @@ const config: Config = {
         '^.+\\.tsx?$': 'ts-jest',
     },
     testMatch: ['<rootDir>/src/**/*.test.(ts|tsx)'],
+    moduleDirectories: ['node_modules', 'src'],
     testEnvironmentOptions: {
         timezone: 'UTC',
     },
