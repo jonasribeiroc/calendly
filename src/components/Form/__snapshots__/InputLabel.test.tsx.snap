@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputLabel Component matches the snapshot 1`] = `
+<DocumentFragment>
+  <label
+    class="sc-blHHSb xrmhh"
+    for="test-input"
+  >
+    Test Label
+    <span
+      class="sc-gtLWhw ezURQU"
+    >
+      *
+    </span>
+  </label>
+</DocumentFragment>
+`;
