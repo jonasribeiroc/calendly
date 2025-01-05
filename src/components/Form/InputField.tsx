@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import InputLabel from './InputLabel';
+import { InputLabel } from './InputLabel';
 
 interface InputFieldProps {
     id: string;
@@ -41,7 +41,7 @@ const ErrorMessage = styled.span`
     font-size: 0.875rem;
 `;
 
-const InputField: React.FC<InputFieldProps> = ({
+export const InputField: React.FC<InputFieldProps> = ({
     id,
     label,
     type = 'text',
@@ -68,5 +68,3 @@ const InputField: React.FC<InputFieldProps> = ({
         </InputContainer>
     );
 };
-
-export default InputField;

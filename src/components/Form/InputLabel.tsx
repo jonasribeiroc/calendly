@@ -19,7 +19,7 @@ const RequiredAsterisk = styled.span`
     margin-left: 0.25rem;
 `;
 
-const InputLabel: React.FC<InputLabelProps> = ({ htmlFor, label, required = false }) => {
+export const InputLabel: React.FC<InputLabelProps> = ({ htmlFor, label, required = false }) => {
     return (
         <StyledLabel htmlFor={htmlFor}>
             {label}
@@ -27,5 +27,3 @@ const InputLabel: React.FC<InputLabelProps> = ({ htmlFor, label, required = fals
         </StyledLabel>
     );
 };
-
-export default InputLabel;

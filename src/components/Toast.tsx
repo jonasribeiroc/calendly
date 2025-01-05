@@ -43,7 +43,7 @@ const ToastContainer = styled.div<ToastContainerProps>`
     }
 `;
 
-const Toast: React.FC<ToastProps> = ({ message, duration = 3000, onClose }) => {
+export const Toast: React.FC<ToastProps> = ({ message, duration = 3000, onClose }) => {
     useEffect(() => {
         const timer = setTimeout(onClose, duration);
         return () => clearTimeout(timer);
@@ -51,5 +51,3 @@ const Toast: React.FC<ToastProps> = ({ message, duration = 3000, onClose }) => {
 
     return <ToastContainer $duration={duration}>{message}</ToastContainer>;
 };
-
-export default Toast;

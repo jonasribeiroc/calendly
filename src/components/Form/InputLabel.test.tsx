@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import InputLabel from './InputLabel';
+import { InputLabel } from './InputLabel';
 
 describe('InputLabel Component', () => {
   it('renders the label with correct text', () => {

@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import styled from 'styled-components';
-import Layout from '../components/Layout';
-import InputField from '../components/Form/InputField';
 import { useForm } from '../hooks/useForm';
 import { postSchedule } from '../services/postSchedule';
 import { getDateUTC } from '../utils/dateUtils';
-import Toast from '../components/Toast';
+import { InputField, Layout, Toast } from '../components';
 
 interface ScheduleEventFormData {
     name: string;

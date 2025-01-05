@@ -7,7 +7,7 @@ interface LayoutProps {
     children?: React.ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = ({ title, isExpanded, children }) => {
+export const Layout: React.FC<LayoutProps> = ({ title, isExpanded, children }) => {
     return (
         <Container style={{ maxWidth: isExpanded ? 1000 : 800 }}>
             <Column style={{ borderRight: '1px solid #eee' }}>
@@ -59,5 +59,3 @@ const Layout: React.FC<LayoutProps> = ({ title, isExpanded, children }) => {
         </Container>
     );
 };
-
-export default Layout;
