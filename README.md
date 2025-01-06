@@ -1,8 +1,8 @@
-# Calendly App
+# Agendly App
 
 ## Description
 
-Calendly is an online scheduling platform designed to simplify the booking of meetings, events, and appointments without the need for unnecessary messages or emails.
+Agendly is an online scheduling platform designed to simplify the booking of meetings, events, and appointments without the need for unnecessary messages or emails.
 
 ### How to run the application.
 
