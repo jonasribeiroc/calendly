@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 interface ToastProps {
     message: string;
+    isShow: boolean;
     duration?: number;
     onClose: () => void; 
 }
@@ -43,11 +44,11 @@ const ToastContainer = styled.div<ToastContainerProps>`
     }
 `;
 
-export const Toast: React.FC<ToastProps> = ({ message, duration = 3000, onClose }) => {
+export const Toast: React.FC<ToastProps> = ({ message, isShow, duration = 3000, onClose }) => {
     useEffect(() => {
         const timer = setTimeout(onClose, duration);
         return () => clearTimeout(timer);
     }, [duration, onClose]);
 
-    return <ToastContainer $duration={duration}>{message}</ToastContainer>;
+    return isShow && (<ToastContainer $duration={duration}>{message}</ToastContainer>);
 };
