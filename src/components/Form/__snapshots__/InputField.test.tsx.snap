@@ -3,23 +3,23 @@
 exports[`InputField Component matches the snapshot with error 1`] = `
 <DocumentFragment>
   <div
-    class="sc-egkSDF gifMPI"
+    class="sc-eaUbBy fdTNpf"
   >
     <label
-      class="sc-blHHSb ctqNWd"
+      class="sc-KXCwU cDImbL"
       for="test-input"
     >
       Test Label
     </label>
     <input
-      class="sc-fAUdSK ilmPJV"
+      class="sc-gaZyOd dLOVyS"
       id="test-input"
       placeholder=""
       type="text"
       value="Test Value"
     />
     <span
-      class="sc-dntaoT AkOfO"
+      class="sc-dDvxFM dxUBU"
     >
       This field is required
     </span>
@@ -30,16 +30,16 @@ exports[`InputField Component matches the snapshot with error 1`] = `
 exports[`InputField Component matches the snapshot without error 1`] = `
 <DocumentFragment>
   <div
-    class="sc-egkSDF gifMPI"
+    class="sc-eaUbBy fdTNpf"
   >
     <label
-      class="sc-blHHSb ctqNWd"
+      class="sc-KXCwU cDImbL"
       for="test-input"
     >
       Test Label
     </label>
     <input
-      class="sc-fAUdSK iVjBIF"
+      class="sc-gaZyOd liDFrS"
       id="test-input"
       placeholder="Enter text"
       type="text"

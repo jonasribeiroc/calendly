@@ -3,12 +3,12 @@
 exports[`InputLabel Component matches the snapshot 1`] = `
 <DocumentFragment>
   <label
-    class="sc-blHHSb ctqNWd"
+    class="sc-KXCwU cDImbL"
     for="test-input"
   >
     Test Label
     <span
-      class="sc-gtLWhw dgecrY"
+      class="sc-gyycJP fBHtoG"
     >
       *
     </span>

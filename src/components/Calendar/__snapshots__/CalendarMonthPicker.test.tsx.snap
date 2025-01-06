@@ -3,11 +3,11 @@
 exports[`CalendarMonthPicker Component matches the snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="sc-blHHSb fJKPUX"
+    class="sc-KXCwU jyEcCJ"
   >
     <button
       aria-label="previous month"
-      class="sc-gtLWhw sc-egkSDF lorpGW fBSbpZ"
+      class="sc-gyycJP sc-eaUbBy kXkBHQ dmXsWy"
       data-testid="previous-month"
     >
       <div
@@ -15,13 +15,13 @@ exports[`CalendarMonthPicker Component matches the snapshot 1`] = `
       />
     </button>
     <span
-      class="sc-dntaoT euESij"
+      class="sc-dDvxFM iETLZJ"
     >
       April 2025
     </span>
     <button
       aria-label="next month"
-      class="sc-gtLWhw sc-fAUdSK lorpGW gofhhg"
+      class="sc-gyycJP sc-gaZyOd kXkBHQ sCJmL"
       data-testid="next-month"
     >
       <div

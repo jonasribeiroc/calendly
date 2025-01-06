@@ -3,42 +3,42 @@
 exports[`CalendarTimes Component matches the snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="sc-fAUdSK joDQZj"
+    class="sc-gaZyOd YBMTE"
   >
     <div
-      class="sc-gtLWhw sc-dntaoT jnpasD clCmLo"
+      class="sc-gyycJP sc-dDvxFM gnOnhV kNqyra"
     >
       Monday, April 15
     </div>
     <div
-      class="sc-blHHSb sc-ivxoEo edipXs hJvgbQ"
+      class="sc-KXCwU sc-jqVXSH bdFQXi hZWqXb"
     >
       <div
-        class="sc-egkSDF sc-ghWlax hEyCam bfpDIU"
+        class="sc-eaUbBy sc-gTrWKq gjoKNp eDYGOG"
         data-testid="07:00 AM"
       >
         <button
-          class="sc-kLhKbu fvfsF"
+          class="sc-kuACkN lOClE"
         >
           07:00 AM
         </button>
       </div>
       <div
-        class="sc-egkSDF sc-ghWlax hEyCam bfpDIU"
+        class="sc-eaUbBy sc-gTrWKq gjoKNp eDYGOG"
         data-testid="11:00 AM"
       >
         <button
-          class="sc-kLhKbu fvfsF"
+          class="sc-kuACkN lOClE"
         >
           11:00 AM
         </button>
       </div>
       <div
-        class="sc-egkSDF sc-ghWlax hEyCam bfpDIU"
+        class="sc-eaUbBy sc-gTrWKq gjoKNp eDYGOG"
         data-testid="01:30 PM"
       >
         <button
-          class="sc-kLhKbu fvfsF"
+          class="sc-kuACkN lOClE"
         >
           01:30 PM
         </button>
