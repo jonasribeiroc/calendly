@@ -21,19 +21,17 @@ const DayCell = styled.button<DayCellProps>`
     border: none;
     font-size: 0.9rem;
     cursor: pointer;
-    background-color: #ebf3fe;
-    color: #0060e6;
+    background-color: ${({ theme }) => theme.colors.primary.light};
+    color: ${({ theme }) => theme.colors.primary.medium};
     font-weight: bold;
 
     &:hover {
-        background-color: #dce7fc;
+        background-color: ${({ theme }) => theme.colors.primary.lightMedium};
     }
     
     &:disabled {
-        background-color: transparent;
-        color: #999;
-        background-color: ${({ $isSelected }) => ($isSelected ? '#0060e6' : '#transparent')};
-        color: ${({ $isSelected }) => ($isSelected ? '#ffffff' : '#999')};
+        background-color: ${({ $isSelected, theme }) => ($isSelected ? theme.colors.primary.medium : 'transparent')};
+        color: ${({ $isSelected, theme }) => ($isSelected ? theme.colors.white : theme.colors.neutral.mediumDark)};
         font-weight: ${({ $isSelected }) => ($isSelected ? 'bold' : 'normal')};;
         cursor: default;
     }

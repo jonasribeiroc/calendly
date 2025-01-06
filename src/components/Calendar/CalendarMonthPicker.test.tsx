@@ -1,34 +1,26 @@
-// CalendarMonthPicker.test.tsx
-
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { screen, fireEvent } from '@testing-library/react';
 import { CalendarMonthPicker } from './CalendarMonthPicker';
 import * as dateUtils from '../../utils/dateUtils';
-import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import { render } from '../../utils/test-utils';
 
-// Mock das funções de dateUtils
 jest.mock('../../utils/dateUtils');
 
-// Mock dos ícones do react-icons
 jest.mock('react-icons/fi', () => ({
   FiChevronLeft: () => <div data-testid="fi-chevron-left" />,
   FiChevronRight: () => <div data-testid="fi-chevron-right" />,
 }));
 
 describe('CalendarMonthPicker Component', () => {
-  // Tipagem dos mocks para TypeScript
   const mockedDateUtils = dateUtils as jest.Mocked<typeof dateUtils>;
 
-  // Função mock para onChange
   const mockOnChange = jest.fn();
 
-  // Dados de teste
-  const mockMonth = new Date('2025-04-15T00:00:00Z'); // Abril de 2025
+  const mockMonth = new Date('2025-04-15T00:00:00Z');
 
   beforeEach(() => {
     jest.clearAllMocks();
 
-    // Mock das funções dateUtils
     mockedDateUtils.getMonthName.mockImplementation((date: Date) => {
       return date.toLocaleString('default', { month: 'long' });
     });
@@ -66,7 +58,6 @@ describe('CalendarMonthPicker Component', () => {
     expect(prevButton).toBeInTheDocument();
     expect(nextButton).toBeInTheDocument();
 
-    // Verificar se os ícones estão presentes
     expect(screen.getByTestId('fi-chevron-left')).toBeInTheDocument();
     expect(screen.getByTestId('fi-chevron-right')).toBeInTheDocument();
   });

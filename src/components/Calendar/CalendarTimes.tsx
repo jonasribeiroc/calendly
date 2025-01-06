@@ -33,9 +33,9 @@ interface CalendarTimesButtonProps {
 
 const CalendarTimesButton = styled.button<CalendarTimesButtonProps>`
     height: 50px;
-    border: 1px solid #007bff;
-    background: ${({ $isSelected }) => ($isSelected ? '#007bff' : '#fff')};
-    color: ${({ $isSelected }) => ($isSelected ? '#fff' : '#007bff')};
+    border: 1px solid ${({ theme }) => theme.colors.primary.mendium};
+    background: ${({ $isSelected, theme }) => ($isSelected ? theme.colors.primary.medium : theme.colors.white)};
+    color: ${({ $isSelected, theme }) => ($isSelected ? theme.colors.white : theme.colors.primary.medium)};
     border-radius: 4px;
     cursor: pointer;
     text-align: center;
@@ -45,7 +45,7 @@ const CalendarTimesButton = styled.button<CalendarTimesButtonProps>`
     transition: all 0.3s ease;
 
     &:hover {
-        border: 2px solid #007bff;
+        border: 2px solid ${({ theme }) => theme.colors.primary.medium};
     }
 
     &:disabled {
@@ -57,7 +57,7 @@ const CalendarTimesButton = styled.button<CalendarTimesButtonProps>`
 
 const SubmitButton = styled.button`
     height: 50px;
-    background-color: #007bff;
+    background-color: ${({ theme }) => theme.colors.primary.medium};
     color: #fff;
     font-weight: bold;
     border: none;
@@ -68,7 +68,7 @@ const SubmitButton = styled.button`
     font-size: 15px;
 
     &:hover {
-        background-color: #0056b3;
+        background-color: ${({ theme }) => theme.colors.primary.mediumDark};
     }
 `;
 

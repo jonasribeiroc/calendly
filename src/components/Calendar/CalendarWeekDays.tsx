@@ -7,7 +7,7 @@ const CalendarWeekDaysContainer = styled.div`
   grid-template-columns: repeat(7, 1fr);
   text-align: center;
   font-size: 0.8rem;
-  color: #999;
+  color: ${({ theme }) => theme.colors.neutral.Dark};
   margin-bottom: 10px;
 `;
 

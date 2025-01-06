@@ -1,9 +1,8 @@
-// CalendarTimes.test.tsx
-
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { screen, fireEvent } from '@testing-library/react';
 import { CalendarTimes } from './CalendarTimes';
 import * as dateUtils from '../../utils/dateUtils';
+import { render } from '../../utils/test-utils';
 
 jest.mock('../../utils/dateUtils');
 

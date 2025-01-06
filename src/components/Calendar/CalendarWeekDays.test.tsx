@@ -1,7 +1,8 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import { CalendarWeekDays } from './CalendarWeekDays';
 import { DAYS_OF_WEEK } from '../../consts';
+import { render } from '../../utils/test-utils';
 
 describe('CalendarWeekDays Component', () => {
   it('renders all days of the week', () => {

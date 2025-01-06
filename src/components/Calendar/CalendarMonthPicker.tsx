@@ -18,10 +18,10 @@ const CalendarMonthPickerButton = styled.button`
     background: none;
     cursor: pointer;
     font-size: 18px;
-    color: #666;
+    color: ${({ theme }) => theme.colors.neutral.mediumDark};
 
     &:hover {
-      color: #333;
+      color: ${({ theme }) => theme.colors.neutral.dark};
     }
 `;
 
@@ -35,6 +35,7 @@ const CalendarMonthPickerNextButton = styled(CalendarMonthPickerButton)`
 
 const CalendarMonthPickerTitle = styled.span`
     font-size: 15px;
+    color: ${({ theme }) => theme.colors.neutral.dark};
 `;
 
 interface CalendarMonthPickerProps {

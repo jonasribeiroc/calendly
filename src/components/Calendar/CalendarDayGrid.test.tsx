@@ -1,7 +1,8 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { screen, fireEvent } from '@testing-library/react';
 import { CalendarDayGrid } from './CalendarDayGrid';
 import * as dateUtils from '../../utils/dateUtils';
+import { render } from '../../utils/test-utils';
 
 jest.mock('../../utils/dateUtils');
 
@@ -90,7 +91,7 @@ describe('CalendarDayGrid Component', () => {
         const selectedDayButton = screen.getByText(String(mockSelectedDate.getUTCDate()));
         expect(selectedDayButton).toBeDisabled();
         expect(selectedDayButton).toHaveStyle('color: #ffffff');
-        expect(selectedDayButton).toHaveStyle('background-color: #0060e6');
+        expect(selectedDayButton).toHaveStyle('background-color: #8c52ff');
     });
 
     it('calls onClick with the correct date when an available day is clicked', () => {
