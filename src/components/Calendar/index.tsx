@@ -10,7 +10,7 @@ import { CalendarTimes } from './CalendarTimes';
 const CalendarContainer = styled.div`
     display: flex;
     font-family: sans-serif;
-    gap: 20px;
+    gap: 30px;
 
     @media (max-width: 900px) {
         flex-direction: column;

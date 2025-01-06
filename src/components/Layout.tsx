@@ -11,7 +11,7 @@ interface LayoutProps {
 
 export const Layout: React.FC<LayoutProps> = ({ title, isExpanded, children }) => {
     return (
-        <Container style={{ maxWidth: isExpanded ? 1000 : 900 }}>
+        <Container style={{ maxWidth: isExpanded ? 1000 : 820 }}>
             <Column style={{ borderRight: `1px solid ${theme.colors.neutral.light}` }}>
                 <Row style={{
                     textAlign: 'center',

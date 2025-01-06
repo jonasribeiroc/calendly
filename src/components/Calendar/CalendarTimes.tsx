@@ -18,7 +18,7 @@ const CalendarTimesTitle = styled(Text)`
 const CalendarTimesColumn = styled(Column)`
     display: flex;
     gap: 10px;
-    width: 90%;
+    width: 100%;
 `;
 
 const CalendarTimesRow = styled(Row)`
