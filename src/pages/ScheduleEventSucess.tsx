@@ -41,8 +41,7 @@ const ScheduleEventSucess: React.FC = () => {
     const navigate = useNavigate();
     const [searchParams] = useSearchParams();
     const [showToast, setShowToast] = useState(false);
-    const date = searchParams.get('date');
-    const dateStr = date && new Date(date).toISOString();
+    const dateStr = new Date(`${searchParams.get('date')?.replace(' ', '+')}`).toISOString();
 
     useEffect(() => {
         setShowToast(true);

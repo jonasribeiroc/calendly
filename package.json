@@ -9,8 +9,8 @@
         "test": "jest --config jest.config.ts",
         "test:ci": "jest --config jest.config.ts --runInBand",
         "test:coverage": "jest --config jest.config.ts --coverage",
-        "cypress:open": "cypress open",
-        "cypress:run": "cypress run"
+        "cypress:open": "TZ=UTC cypress open",
+        "cypress:run": "TZ=UTC cypress run"
     },
     "keywords": [],
     "author": "Jonas",
