@@ -1,6 +1,7 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { screen, fireEvent } from '@testing-library/react';
 import { InputField } from './InputField';
+import { render } from '../../utils/test-utils';
 
 describe('InputField Component', () => {
     const mockOnChange = jest.fn();
@@ -109,7 +110,7 @@ describe('InputField Component', () => {
             />
         );
         const input = screen.getByDisplayValue(mockValue);
-        expect(input).toHaveStyle('border: 2px solid red');
+        expect(input).toHaveStyle('border: 2px solid #e74c3c');
     });
 
     it('renders error message when hasError is true', () => {

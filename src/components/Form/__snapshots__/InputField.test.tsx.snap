@@ -6,20 +6,20 @@ exports[`InputField Component matches the snapshot with error 1`] = `
     class="sc-egkSDF gifMPI"
   >
     <label
-      class="sc-blHHSb xrmhh"
+      class="sc-blHHSb ctqNWd"
       for="test-input"
     >
       Test Label
     </label>
     <input
-      class="sc-fAUdSK bfpGeu"
+      class="sc-fAUdSK ilmPJV"
       id="test-input"
       placeholder=""
       type="text"
       value="Test Value"
     />
     <span
-      class="sc-dntaoT eDtpMW"
+      class="sc-dntaoT AkOfO"
     >
       This field is required
     </span>
@@ -33,13 +33,13 @@ exports[`InputField Component matches the snapshot without error 1`] = `
     class="sc-egkSDF gifMPI"
   >
     <label
-      class="sc-blHHSb xrmhh"
+      class="sc-blHHSb ctqNWd"
       for="test-input"
     >
       Test Label
     </label>
     <input
-      class="sc-fAUdSK jNbDYC"
+      class="sc-fAUdSK iVjBIF"
       id="test-input"
       placeholder="Enter text"
       type="text"

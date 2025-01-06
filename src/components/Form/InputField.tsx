@@ -26,18 +26,18 @@ interface StyledInputProps {
 
 const StyledInput = styled.input<StyledInputProps>`
     padding: 12px;
-    border: ${(props) => (props.$hasError ? '2px solid red' : '1px solid #ccc')};
+    border: ${({ $hasError, theme }) => ($hasError ? `2px solid ${theme.colors.error}` : `1px solid ${theme.colors.neutral.mediumDark}`)};
     border-radius: 4px;
     font-size: 15px;
 
     &:focus {
         outline: none;
-        border-color: #007bff;
+        border-color: ${({ theme }) => theme.colors.primary.medium};
     }
 `;
 
 const ErrorMessage = styled.span`
-    color: red;
+    color: ${({ theme }) => theme.colors.error};
     font-size: 0.875rem;
 `;
 

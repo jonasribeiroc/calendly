@@ -11,11 +11,11 @@ const StyledLabel = styled.label`
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
-    color: #333;
+    color: ${({ theme }) => theme.colors.neutral.dark};
 `;
 
 const RequiredAsterisk = styled.span`
-    color: #333;
+    color: ${({ theme }) => theme.colors.neutral.dark};
     margin-left: 0.25rem;
 `;
 
