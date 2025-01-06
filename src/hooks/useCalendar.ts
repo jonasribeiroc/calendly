@@ -8,6 +8,7 @@ export const useCalendar = () => {
     const navigate = useNavigate();
     const [month, setMonth] = useState<Date>();
     const [date, setDate] = useState<Date>();
+    const [isLoading, setIsLoading] = useState<boolean>(false);
     const [availableDateTimes, setAvailableDateTimes] = useState<string[]>([]);
 
     const onClickDay = (date: Date) => {
@@ -40,10 +41,12 @@ export const useCalendar = () => {
     }, [searchParams, setSearchParams]);
 
     const fetchAvailableTimes = useCallback(async (month: Date) => {
+        setIsLoading(true);
         const dateTimes = await getAvailableDateTimes(
             getDateString(getFirstDayOfMonth(month), 'yyyy-MM-dd\'T\'HH:mm:ss'),
             getDateString(getLastDayOfMonth(month), 'yyyy-MM-dd\'T\'HH:mm:ss')
         );
+        setIsLoading(false);
         setAvailableDateTimes(dateTimes);
     }, []);
 
@@ -77,6 +80,7 @@ export const useCalendar = () => {
         availableDateTimes,
         month,
         date,
+        isLoading,
         onClickDay,
         onClickTime,
         onChangeMonth
