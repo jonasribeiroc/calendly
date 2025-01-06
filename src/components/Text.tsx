@@ -6,4 +6,5 @@ interface TextProps {
 
 export const Text = styled.div<TextProps>`
     margin: 0;
+    color: ${({ theme }) => theme.colors.neutral.dark};
 `;

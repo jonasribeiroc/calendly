@@ -3,12 +3,14 @@ import styled from 'styled-components';
 
 interface ToastProps {
     message: string;
+    type: 'success';
     isShow: boolean;
     duration?: number;
     onClose: () => void; 
 }
 
 interface ToastContainerProps {
+    $type?: string; 
     $duration?: number; 
 }
 
@@ -17,7 +19,7 @@ const ToastContainer = styled.div<ToastContainerProps>`
     top: 20px;
     right: 20px;
     padding: 16px 24px;
-    background-color: #4aab62;
+    background-color: ${({ $type, theme }) => theme.colors[$type || 'info']};
     color: white;
     font-size: 16px;
     border-radius: 8px;
@@ -44,11 +46,11 @@ const ToastContainer = styled.div<ToastContainerProps>`
     }
 `;
 
-export const Toast: React.FC<ToastProps> = ({ message, isShow, duration = 3000, onClose }) => {
+export const Toast: React.FC<ToastProps> = ({ message, isShow, type, duration = 3000, onClose }) => {
     useEffect(() => {
         const timer = setTimeout(onClose, duration);
         return () => clearTimeout(timer);
     }, [duration, onClose]);
 
-    return isShow && (<ToastContainer $duration={duration}>{message}</ToastContainer>);
+    return isShow && (<ToastContainer $type={type} $duration={duration}>{message}</ToastContainer>);
 };

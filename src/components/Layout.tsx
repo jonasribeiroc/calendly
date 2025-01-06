@@ -1,5 +1,6 @@
 import React from 'react';
 import { Avatar, Column, Container, Row, Text } from './';
+import { theme } from '../theme';
 
 interface LayoutProps {
     title: string;
@@ -10,10 +11,10 @@ interface LayoutProps {
 export const Layout: React.FC<LayoutProps> = ({ title, isExpanded, children }) => {
     return (
         <Container style={{ maxWidth: isExpanded ? 1000 : 800 }}>
-            <Column style={{ borderRight: '1px solid #eee' }}>
+            <Column style={{ borderRight: `1px solid ${theme.colors.neutral.light}` }}>
                 <Row style={{
                     textAlign: 'center',
-                    borderBottom: '1px solid #eee',
+                    borderBottom: `1px solid ${theme.colors.neutral.light}`,
                     justifyContent: 'center',
                     paddingTop: '25px',
                     paddingBottom: '25px'
@@ -32,14 +33,14 @@ export const Layout: React.FC<LayoutProps> = ({ title, isExpanded, children }) =
                         width='65px'
                         height='65px'
                     />
-                    <Text style={{ color: '#7d7d7d', fontWeight: 'bold' }}>
+                    <Text style={{ color: theme.colors.neutral.mediumDark, fontWeight: 'bold' }}>
                         Arvind Menon
                     </Text>
                     <Text as='h1'>60 Minute Interview</Text>
-                    <Text style={{ color: '#7d7d7d' }}>
+                    <Text style={{ color: theme.colors.neutral.mediumDark }}>
                         60 min
                     </Text>
-                    <Text style={{ color: '#7d7d7d' }}>
+                    <Text style={{ color: theme.colors.neutral.mediumDark }}>
                         Web conferencing details provided upon confirmation.
                     </Text>
                 </Row>

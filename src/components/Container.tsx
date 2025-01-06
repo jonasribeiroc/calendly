@@ -8,7 +8,7 @@ export const Container = styled.div`
     margin-top: 66px;
     margin-bottom: 30px;
     background-color: #fff;
-    border: 1px solid var(--text-color-level3, rgba(26, 26, 26, 0.1));
+    border: 1px solid ${({ theme }) => theme.colors.neutral.light};
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 1px 8px 0 rgb(0 0 0 / 8%);

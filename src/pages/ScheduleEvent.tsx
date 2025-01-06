@@ -16,8 +16,8 @@ const FormContainer = styled.div`
 `;
 
 const SubmitButton = styled.button`
-    background-color: #007bff;
-    color: #fff;
+    background-color: ${({ theme }) => theme.colors.primary.medium};
+    color: ${({ theme }) => theme.colors.white};
     border: none;
     border-radius: 40px;
     padding: 12px 20px;
@@ -28,7 +28,7 @@ const SubmitButton = styled.button`
     margin-top: 20px;
 
     &:hover {
-        background-color: #0056b3;
+        background-color: ${({ theme }) => theme.colors.primary.mediumDark};
     }
 `;
 

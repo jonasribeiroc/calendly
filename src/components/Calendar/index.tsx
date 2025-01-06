@@ -4,7 +4,7 @@ import { getAvailableDays, getAvailableTimes } from '../../utils/dateUtils';
 import { Column } from '../Column';
 import { CalendarMonthPicker } from './CalendarMonthPicker';
 import { CalendarWeekDays } from './CalendarWeekDays';
-import { CalendarDayGrid } from './CalendarDayGrid';
+import { CalendarDayGrid } from '../CalendarDayGrid';
 import { CalendarTimes } from './CalendarTimes';
 
 const CalendarContainer = styled.div`

@@ -11,7 +11,7 @@ const Details = styled.div`
 const DetailItem = styled.p`
     margin: 10px 0;
     font-size: 16px;
-    color: #555;
+    color: ${({ theme }) => theme.colors.neutral.mediumDark};
     background-color: transparent;
 
     & strong {
@@ -20,9 +20,9 @@ const DetailItem = styled.p`
 `;
 
 const NewScheduleButton = styled.button`
-    background-color: transparent;
-    color: #007bff;
-    border: none;
+    background-color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.primary.medium};
+    border: 1px solid ${({ theme }) => theme.colors.primary.medium};
     border-radius: 40px;
     padding: 12px 20px;
     font-size: 16px;
@@ -32,8 +32,8 @@ const NewScheduleButton = styled.button`
     margin-top: 20px;
 
     &:hover {
-        background-color: #eeeeee;
-        color: #0070e9;
+        background-color: ${({ theme }) => theme.colors.primary.medium};
+        color: ${({ theme }) => theme.colors.white};
     }
 `;
 
@@ -57,6 +57,7 @@ const ScheduleEventSucess: React.FC = () => {
             </Details>
             <Toast
                 message={'Created successfully!'}
+                type='success'
                 isShow={showToast}
                 duration={3000}
                 onClose={() => { setShowToast(false) }}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { screen, fireEvent } from '@testing-library/react';
-import { CalendarDayGrid } from './CalendarDayGrid';
+import { CalendarDayGrid } from '../CalendarDayGrid';
 import * as dateUtils from '../../utils/dateUtils';
 import { render } from '../../utils/test-utils';
 

@@ -28,7 +28,7 @@ const SpinnerOverlay = styled.div`
 const SpinnerIcon = styled(FiLoader)`
   animation: ${spin} 2s linear infinite;
   font-size: 48px;
-  color: #007bff;
+  color: ${({ theme }) => theme.colors.primary.medium};
 `;
 
 const ChildrenWrapper = styled.div<{ $isLoading: boolean }>`
