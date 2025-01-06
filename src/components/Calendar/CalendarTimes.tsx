@@ -43,6 +43,7 @@ const CalendarTimesButton = styled.button<CalendarTimesButtonProps>`
     width: ${({ $isSelected }) => ($isSelected ? '50%' : '100%')};
     font-size: 15px;
     transition: all 0.3s ease;
+    transition-property: width, transform;
 
     &:hover {
         border: 2px solid ${({ theme }) => theme.colors.primary.medium};
