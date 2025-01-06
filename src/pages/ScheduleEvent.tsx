@@ -72,7 +72,7 @@ const ScheduleEvent: React.FC = () => {
                             onChange={handleChange}
                         />
 
-                        <SubmitButton type="submit">Schedule Event</SubmitButton>
+                        <SubmitButton data-testid="submit-button" type="submit">Schedule Event</SubmitButton>
                     </FormContainer>
                 </form>
             </Loading>

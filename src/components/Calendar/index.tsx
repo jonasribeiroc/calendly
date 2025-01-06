@@ -4,7 +4,7 @@ import { getAvailableDays, getAvailableTimes } from '../../utils/dateUtils';
 import { Column } from '../Column';
 import { CalendarMonthPicker } from './CalendarMonthPicker';
 import { CalendarWeekDays } from './CalendarWeekDays';
-import { CalendarDayGrid } from '../CalendarDayGrid';
+import { CalendarDayGrid } from './CalendarDayGrid';
 import { CalendarTimes } from './CalendarTimes';
 
 const CalendarContainer = styled.div`
@@ -41,7 +41,7 @@ export const Calendar: React.FC<CalendarProps> = ({
     const availableTimes = isSelectedDate ? getAvailableTimes(availableDateTimes,selectedDate) : [];
 
     return (
-        <CalendarContainer>
+        <CalendarContainer data-testid="calendar">
             <Column style={{ minWidth: 350, maxWidth: 350 }}>
                 <CalendarMonthPicker month={month} onChange={onChangeMonth} />
 

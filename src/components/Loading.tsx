@@ -38,7 +38,7 @@ const ChildrenWrapper = styled.div<{ $isLoading: boolean }>`
 
 export const Loading: React.FC<LoadingProps> = ({ isLoading, children }) => {
   return (
-    <LoadingContainer>
+    <LoadingContainer data-testid="spinner-icon">
       <ChildrenWrapper $isLoading={isLoading}>
         {children}
       </ChildrenWrapper>

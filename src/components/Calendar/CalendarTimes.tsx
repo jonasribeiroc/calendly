@@ -107,7 +107,7 @@ export const CalendarTimes: React.FC<CalendarTimesProps> = ({
 
             <CalendarTimesColumn>
                 {availableTimes.map((date: Date, index: number) => (
-                    <CalendarTimesRow key={index}>
+                    <CalendarTimesRow key={index} data-testid={getTime(date)}>
                         <CalendarTimesButton
                             $isSelected={currentDate === date}
                             onClick={() => handleTimeClick(date)}
@@ -116,7 +116,7 @@ export const CalendarTimes: React.FC<CalendarTimesProps> = ({
                             {getTime(date)}
                         </CalendarTimesButton>
                         {currentDate && currentDate === date &&(
-                            <SubmitButton onClick={handleSubmit}>
+                            <SubmitButton data-testid="next-button" onClick={handleSubmit}>
                                 Next
                             </SubmitButton>
                         )}

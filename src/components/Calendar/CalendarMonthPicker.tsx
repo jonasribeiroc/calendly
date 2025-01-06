@@ -60,11 +60,11 @@ export const CalendarMonthPicker: React.FC<CalendarMonthPickerProps> = ({
 
     return (
         <CalendarMonthPickerContainer>
-            <CalendarMonthPickerPrevButton aria-label='previous month' onClick={handlePrev}>
+            <CalendarMonthPickerPrevButton data-testid="previous-month" aria-label='previous month' onClick={handlePrev}>
                 <FiChevronLeft />
             </CalendarMonthPickerPrevButton>
             <CalendarMonthPickerTitle>{getMonthName(month)} {getYear(month)}</CalendarMonthPickerTitle>
-            <CalendarMonthPickerNextButton aria-label='next month' onClick={handleNext}>
+            <CalendarMonthPickerNextButton data-testid="next-month" aria-label='next month' onClick={handleNext}>
                 <FiChevronRight />
             </CalendarMonthPickerNextButton>
         </CalendarMonthPickerContainer>

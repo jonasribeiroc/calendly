@@ -65,6 +65,7 @@ export const CalendarDayGrid: React.FC<CalendarDayGridProps> = ({
                 return (
                     <DayCell
                         key={i}
+                        data-testid={day}
                         disabled={!day || !date || day === selectedDay}
                         onClick={() => date && onClick(date)}
                         $isSelected={!!selectedDay && selectedDay === day}
