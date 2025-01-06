@@ -1,6 +1,7 @@
 import React from 'react';
 import { Avatar, Column, Container, Row, Text } from './';
 import { theme } from '../theme';
+import { FiCamera, FiClock } from 'react-icons/fi';
 
 interface LayoutProps {
     title: string;
@@ -37,12 +38,19 @@ export const Layout: React.FC<LayoutProps> = ({ title, isExpanded, children }) =
                         Arvind Menon
                     </Text>
                     <Text as='h1'>60 Minute Interview</Text>
-                    <Text style={{ color: theme.colors.neutral.mediumDark }}>
-                        60 min
-                    </Text>
-                    <Text style={{ color: theme.colors.neutral.mediumDark }}>
-                        Web conferencing details provided upon confirmation.
-                    </Text>
+                    <Row style={{ display: 'flex', marginTop: 15 }}>
+                        <FiClock style={{ marginRight: 10, fontSize: 20, color: theme.colors.neutral.mediumDark }}/>
+                        <Text style={{ color: theme.colors.neutral.mediumDark }}>
+                            60 min
+                        </Text>
+                    </Row>
+                    <Row style={{ display: 'flex', marginTop: 10 }}>
+                        <FiCamera style={{ marginRight: 10, fontSize: 20, color: theme.colors.neutral.mediumDark }}/>
+                        <Text style={{ color: theme.colors.neutral.mediumDark }}>
+                            Web conferencing details provided upon confirmation.
+                        </Text>
+                    </Row>
+
                 </Row>
             </Column>
             <Column style={{ flex: isExpanded ? 2 : 1, transition: 'all 0.22s ease-out' }}>
