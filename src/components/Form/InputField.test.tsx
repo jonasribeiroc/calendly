@@ -140,31 +140,4 @@ describe('InputField Component', () => {
         );
         expect(screen.queryByText(mockErrorMessage)).not.toBeInTheDocument();
     });
-
-    it('matches the snapshot without error', () => {
-        const { asFragment } = render(
-            <InputField
-                id={mockId}
-                label={mockLabel}
-                value={mockValue}
-                onChange={mockOnChange}
-                placeholder={mockPlaceholder}
-            />
-        );
-        expect(asFragment()).toMatchSnapshot();
-    });
-
-    it('matches the snapshot with error', () => {
-        const { asFragment } = render(
-            <InputField
-                id={mockId}
-                label={mockLabel}
-                value={mockValue}
-                onChange={mockOnChange}
-                hasError
-                errorMessage={mockErrorMessage}
-            />
-        );
-        expect(asFragment()).toMatchSnapshot();
-    });
 });

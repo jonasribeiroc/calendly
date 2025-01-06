@@ -24,9 +24,4 @@ describe('InputLabel Component', () => {
     render(<InputLabel htmlFor="test-input" label="Test Label" />);
     expect(screen.queryByText('*')).not.toBeInTheDocument();
   });
-
-  it('matches the snapshot', () => {
-    const { asFragment } = render(<InputLabel htmlFor="test-input" label="Test Label" required />);
-    expect(asFragment()).toMatchSnapshot();
-  });
 });

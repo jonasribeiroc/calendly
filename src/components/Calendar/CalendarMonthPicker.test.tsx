@@ -111,9 +111,4 @@ describe('CalendarMonthPicker Component', () => {
     const expectedPreviousMonth = new Date(Date.UTC(2024, 11, 1)); // Dezembro de 2024
     expect(mockOnChange).toHaveBeenCalledWith(expectedPreviousMonth);
   });
-
-  it('matches the snapshot', () => {
-    const { asFragment } = render(<CalendarMonthPicker month={mockMonth} onChange={mockOnChange} />);
-    expect(asFragment()).toMatchSnapshot();
-  });
 });

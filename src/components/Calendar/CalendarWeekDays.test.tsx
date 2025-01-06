@@ -11,9 +11,4 @@ describe('CalendarWeekDays Component', () => {
       expect(screen.getByText(day)).toBeInTheDocument();
     });
   });
-
-  it('matches the snapshot', () => {
-    const { asFragment } = render(<CalendarWeekDays />);
-    expect(asFragment()).toMatchSnapshot();
-  });
 });

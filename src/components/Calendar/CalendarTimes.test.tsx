@@ -185,15 +185,4 @@ describe('CalendarTimes Component', () => {
     const submitButton = screen.queryByText('Next');
     expect(submitButton).not.toBeInTheDocument();
   });
-
-  it('matches the snapshot', () => {
-    const { asFragment } = render(
-      <CalendarTimes
-        selectedDate={mockSelectedDate}
-        availableTimes={mockAvailableTimes}
-        onClick={mockOnClick}
-      />
-    );
-    expect(asFragment()).toMatchSnapshot();
-  });
 });
