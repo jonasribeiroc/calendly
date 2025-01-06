@@ -8,9 +8,15 @@ import { CalendarDayGrid } from '../CalendarDayGrid';
 import { CalendarTimes } from './CalendarTimes';
 
 const CalendarContainer = styled.div`
-  display: flex;
-  font-family: sans-serif;
-  gap: 20px;
+    display: flex;
+    font-family: sans-serif;
+    gap: 20px;
+
+    @media (max-width: 900px) {
+        flex-direction: column;
+        justify-content: center;
+        justify-self: center;
+    }
 `;
 
 interface CalendarProps {
@@ -36,7 +42,7 @@ export const Calendar: React.FC<CalendarProps> = ({
 
     return (
         <CalendarContainer>
-            <Column style={{ minWidth: 350 }}>
+            <Column style={{ minWidth: 350, maxWidth: 350 }}>
                 <CalendarMonthPicker month={month} onChange={onChangeMonth} />
 
                 <CalendarWeekDays />

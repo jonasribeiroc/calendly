@@ -5,7 +5,7 @@ export const Column = styled.div`
     flex-direction: column;
     align-items: center;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 900px) {
         border: none;
     }
 `;

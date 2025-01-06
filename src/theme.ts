@@ -21,4 +21,9 @@ export const theme = {
         info: '#3498db',
         highlight: '#e67e22',
     },
+    fontSizes: {
+        text: 14,
+        h1: 24,
+        h2: 20,
+    }
 };
