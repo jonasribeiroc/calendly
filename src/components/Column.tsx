@@ -6,6 +6,6 @@ export const Column = styled.div`
     align-items: center;
 
     @media (max-width: 900px) {
-        border: none;
+        border: none !important;
     }
 `;
