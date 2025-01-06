@@ -7,7 +7,7 @@ export const Container = styled.div`
     margin: auto;
     margin-top: 66px;
     margin-bottom: 30px;
-    background-color: #fff;
+    background-color: ${({ theme }) => theme.colors.white};
     border: 1px solid ${({ theme }) => theme.colors.neutral.light};
     border-radius: 8px;
     overflow: hidden;

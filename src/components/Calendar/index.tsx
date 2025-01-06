@@ -10,7 +10,6 @@ import { CalendarTimes } from './CalendarTimes';
 const CalendarContainer = styled.div`
   display: flex;
   font-family: sans-serif;
-  color: #555;
   gap: 20px;
 `;
 

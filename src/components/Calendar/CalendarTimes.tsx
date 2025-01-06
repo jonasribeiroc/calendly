@@ -49,7 +49,7 @@ const CalendarTimesButton = styled.button<CalendarTimesButtonProps>`
     }
 
     &:disabled {
-        background-color: #717171;
+        background-color: ${({ theme }) => theme.colors.neutral.mediumDark};
         border: none;
         cursor: default;
     }
@@ -58,7 +58,7 @@ const CalendarTimesButton = styled.button<CalendarTimesButtonProps>`
 const SubmitButton = styled.button`
     height: 50px;
     background-color: ${({ theme }) => theme.colors.primary.medium};
-    color: #fff;
+    color: ${({ theme }) => theme.colors.white};
     font-weight: bold;
     border: none;
     border-radius: 4px;
