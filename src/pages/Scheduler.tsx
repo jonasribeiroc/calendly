@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar } from '../components';
+import { Calendar, Loading } from '../components';
 import { useCalendar } from '../hooks/useCalendar';
 import { Layout } from '../components';
 
@@ -8,6 +8,7 @@ const Scheduler: React.FC = () => {
         availableDateTimes,
         month,
         date,
+        isLoading,
         onClickDay,
         onClickTime,
         onChangeMonth
@@ -15,14 +16,16 @@ const Scheduler: React.FC = () => {
 
     return (
         <Layout title='Select a Date & Time' isExpanded={!!date}>
-            {month ? (<Calendar
-                month={month}
-                selectedDate={date}
-                availableDateTimes={availableDateTimes}
-                onClickDay={onClickDay}
-                onClickTime={onClickTime}
-                onChangeMonth={onChangeMonth}
-            />) : null}
+            <Loading isLoading={isLoading}>
+                {month ? (<Calendar
+                    month={month}
+                    selectedDate={date}
+                    availableDateTimes={availableDateTimes}
+                    onClickDay={onClickDay}
+                    onClickTime={onClickTime}
+                    onChangeMonth={onChangeMonth}
+                />) : null}
+            </Loading>
         </Layout>
     );
 }

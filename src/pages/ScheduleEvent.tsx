@@ -3,8 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { useForm } from '../hooks/useForm';
 import { postSchedule } from '../services/postSchedule';
-import { getDateUTC } from '../utils/dateUtils';
-import { InputField, Layout, Toast } from '../components';
+import { InputField, Layout, Loading } from '../components';
 
 interface ScheduleEventFormData {
     name: string;
@@ -40,55 +39,43 @@ const ScheduleEvent: React.FC = () => {
         name: '',
         email: '',
     });
-    const [showToast, setShowToast] = useState(false);
-    const [toastMessage, setToastMessage] = useState('');
+    const [isLoading, setIsLoading] = useState<boolean>(false);
 
     const onSubmit = async (data: ScheduleEventFormData) => {
         if (date) {
+            setIsLoading(true);
             const response = await postSchedule(date, data.name, data.email);
-            setToastMessage(`
-                Created successfully!
-                ID: ${response.id}
-                Date: ${getDateUTC(response.date)}
-                Name: ${response.name}
-                Email: ${response.email}`
-            )
-            setShowToast(true);
+            setIsLoading(false);
             resetForm();
-            setTimeout(() => navigate(`/`), 3000);
+            navigate(`/success?name=${response.name}&email=${response.email}&date=${response.date}`);
         }
     };
 
     return (
         <Layout title='Enter Details'>
-            <form onSubmit={(e) => handleSubmit(e, onSubmit)}>
-                <FormContainer>
-                    <InputField
-                        id="name"
-                        label="Name"
-                        required
-                        value={formData.name}
-                        onChange={handleChange}
-                    />
-                    <InputField
-                        id="email"
-                        label="Email"
-                        type="email"
-                        required
-                        value={formData.email}
-                        onChange={handleChange}
-                    />
+            <Loading isLoading={isLoading}>
+                <form onSubmit={(e) => handleSubmit(e, onSubmit)}>
+                    <FormContainer>
+                        <InputField
+                            id="name"
+                            label="Name"
+                            required
+                            value={formData.name}
+                            onChange={handleChange}
+                        />
+                        <InputField
+                            id="email"
+                            label="Email"
+                            type="email"
+                            required
+                            value={formData.email}
+                            onChange={handleChange}
+                        />
 
-                    <SubmitButton type="submit">Schedule Event</SubmitButton>
-                </FormContainer>
-            </form>
-            {showToast && (
-                <Toast
-                    message={toastMessage}
-                    duration={3000}
-                    onClose={() => {setShowToast(false)}}
-                />
-            )}
+                        <SubmitButton type="submit">Schedule Event</SubmitButton>
+                    </FormContainer>
+                </form>
+            </Loading>
         </Layout>
     );
 };
