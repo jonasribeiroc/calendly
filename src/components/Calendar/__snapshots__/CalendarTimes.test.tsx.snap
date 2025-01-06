@@ -17,7 +17,7 @@ exports[`CalendarTimes Component matches the snapshot 1`] = `
         class="sc-egkSDF sc-ghWlax ljSLWe bfpDIU"
       >
         <button
-          class="sc-kLhKbu heyRTp"
+          class="sc-kLhKbu fyOgeV"
         >
           07:00 AM
         </button>
@@ -26,7 +26,7 @@ exports[`CalendarTimes Component matches the snapshot 1`] = `
         class="sc-egkSDF sc-ghWlax ljSLWe bfpDIU"
       >
         <button
-          class="sc-kLhKbu heyRTp"
+          class="sc-kLhKbu fyOgeV"
         >
           11:00 AM
         </button>
@@ -35,7 +35,7 @@ exports[`CalendarTimes Component matches the snapshot 1`] = `
         class="sc-egkSDF sc-ghWlax ljSLWe bfpDIU"
       >
         <button
-          class="sc-kLhKbu heyRTp"
+          class="sc-kLhKbu fyOgeV"
         >
           01:30 PM
         </button>
