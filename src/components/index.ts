@@ -5,6 +5,7 @@ import { Container } from "./Container";
 import { InputField } from "./Form/InputField";
 import { InputLabel } from "./Form/InputLabel";
 import { Layout } from "./Layout";
+import { Loading } from "./Loading";
 import { Row } from "./Row";
 import { Text } from "./Text";
 import { Toast } from "./Toast";
@@ -17,6 +18,7 @@ export {
     InputField,
     InputLabel,
     Layout,
+    Loading,
     Row,
     Text,
     Toast,
