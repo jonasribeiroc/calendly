@@ -4,7 +4,10 @@
 
 Agendly is an online scheduling platform designed to simplify the booking of meetings, events, and appointments without the need for unnecessary messages or emails.
 
-### How to run the application.
+## Tech Stack
+React, Styled Components, TypeScript, React Testing Library, Jest, Cypress, Webpack
+
+### How to run the application
 
 #### 1. Install
 
@@ -28,7 +31,7 @@ Agendly is an online scheduling platform designed to simplify the booking of mee
 
     npm run test:coverage
 
-### How to run cypress.
+### How to run cypress
 
 #### 1. Run app
 
@@ -41,3 +44,6 @@ Agendly is an online scheduling platform designed to simplify the booking of mee
 #### 3. Open cypress(optional):
 
     npm run cypress:open
+
+## Next Steps
+- Improve the design system, using a UI Lib, for example MaterialUI
