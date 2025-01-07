@@ -14,6 +14,8 @@ import {
     startOfMonth,
     endOfMonth,
     getDate,
+    startOfDay,
+    isAfter,
 } from 'date-fns';
 
 function getDateUTC(date?: Date): Date {
@@ -41,6 +43,13 @@ function isValidDateString(str: string, formats: string[]): boolean {
         return isValid(parsedDate) && format(parsedDate, formatStr) === str;
     });
 }
+
+function isDateGreater(date1: Date, date2: Date): boolean {
+    const startDate1 = startOfDay(date1);
+    const startDate2 = startOfDay(date2);
+  
+    return isAfter(startDate1, startDate2);
+  }
 
 function getDateFromString(str: string | null, dateFormat: string): Date | undefined {
     if (str && isValidDateString(str, [dateFormat])) {
@@ -117,9 +126,10 @@ function getPreviousMonth(date: Date): Date {
 }
 
 export {
+    getDateUTC,
     isSameMonth,
     isValidDateString,
-    getDateUTC,
+    isDateGreater,
     getDateFromString,
     getDateString,
     getYear,

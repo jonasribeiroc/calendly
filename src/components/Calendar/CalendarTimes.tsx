@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { getMonthDay, getMonthName, getTime, getWeekDayName } from '../../utils/dateUtils';
+import { getDateUTC, getMonthDay, getMonthName, getTime, getWeekDayName } from '../../utils/dateUtils';
 import { Column } from '../Column';
 import { Text } from '../Text';
 import { Row } from '../Row';
@@ -28,7 +28,7 @@ const CalendarTimesRow = styled(Row)`
 `;
 
 interface CalendarTimesButtonProps {
-    $isSelected?: boolean 
+    $isSelected?: boolean
 }
 
 const CalendarTimesButton = styled.button<CalendarTimesButtonProps>`
@@ -73,6 +73,11 @@ const SubmitButton = styled.button`
     }
 `;
 
+const NoAvailableTimes = styled(Text)`
+    color: ${({ theme }) => theme.colors.neutral.mediumDark};
+    font-weight: bold;
+`;
+
 interface CalendarTimesProps {
     selectedDate: Date;
     availableTimes: Date[];
@@ -85,6 +90,8 @@ export const CalendarTimes: React.FC<CalendarTimesProps> = ({
     onClick,
 }) => {
     const [currentDate, setCurrentDate] = useState<Date | null>(null);
+    const availableTimesFiltered = availableTimes.filter((date: Date) => getDateUTC() < date);
+
 
     const handleTimeClick = (date: Date) => {
         setCurrentDate(date);
@@ -107,7 +114,7 @@ export const CalendarTimes: React.FC<CalendarTimesProps> = ({
             </CalendarTimesTitle>
 
             <CalendarTimesColumn>
-                {availableTimes.map((date: Date, index: number) => (
+                {availableTimesFiltered.map((date: Date, index: number) => (
                     <CalendarTimesRow key={index} data-testid={getTime(date)}>
                         <CalendarTimesButton
                             $isSelected={currentDate === date}
@@ -116,13 +123,14 @@ export const CalendarTimes: React.FC<CalendarTimesProps> = ({
                         >
                             {getTime(date)}
                         </CalendarTimesButton>
-                        {currentDate && currentDate === date &&(
+                        {currentDate && currentDate === date && (
                             <SubmitButton data-testid="next-button" onClick={handleSubmit}>
                                 Next
                             </SubmitButton>
                         )}
                     </CalendarTimesRow>
                 ))}
+                {!availableTimesFiltered.length ? <NoAvailableTimes>No available times</NoAvailableTimes> : null}
             </CalendarTimesColumn>
 
 

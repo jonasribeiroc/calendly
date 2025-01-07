@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { getMonthDay, getFirstDayOfMonth, getMonthDays, getWeekDay } from '../../utils/dateUtils';
+import { getMonthDay, getFirstDayOfMonth, getMonthDays, getWeekDay, getDateUTC, isDateGreater } from '../../utils/dateUtils';
 
 const DayGrid = styled.div`
     display: grid;
@@ -66,7 +66,7 @@ export const CalendarDayGrid: React.FC<CalendarDayGridProps> = ({
                     <DayCell
                         key={i}
                         data-testid={day}
-                        disabled={!day || !date || day === selectedDay}
+                        disabled={!day || !date || day === selectedDay || isDateGreater(getDateUTC(), date)}
                         onClick={() => date && onClick(date)}
                         $isSelected={!!selectedDay && selectedDay === day}
                     >
