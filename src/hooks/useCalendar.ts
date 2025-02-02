@@ -1,10 +1,12 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState, useContext } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { getDateFromString, getDateString, getDateUTC, getFirstDayOfMonth, getLastDayOfMonth, isSameMonth } from '../utils/dateUtils';
 import { getAvailableDateTimes } from '../services/getAvailableDateTimes';
+import { Context } from '../context/ContextProvider';
 
 export const useCalendar = () => {
     const [searchParams, setSearchParams] = useSearchParams();
+    const { updateParams } = useContext(Context);
     const navigate = useNavigate();
     const [month, setMonth] = useState<Date>();
     const [date, setDate] = useState<Date>();
@@ -60,6 +62,7 @@ export const useCalendar = () => {
         const newMonth = getDateFromString(searchParams.get('month'), 'yyyy-MM');
         if (newMonth) {
             setMonth(newMonth);
+            updateParams('month', newMonth);
         } else {
             setTimeout(() => updateQueryParam('month', getDateString(getDateUTC())), 100);
         }

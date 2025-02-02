@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { useForm } from '../hooks/useForm';
 import { postSchedule } from '../services/postSchedule';
 import { InputField, Layout, Loading } from '../components';
+import { Context } from '../context/ContextProvider';
 
 interface ScheduleEventFormData {
     name: string;
@@ -35,6 +36,7 @@ const SubmitButton = styled.button`
 const ScheduleEvent: React.FC = () => {
     const navigate = useNavigate();
     const { date } = useParams<{ date: string }>();
+    const { params } = useContext(Context);
     const { formData, handleChange, handleSubmit, resetForm } = useForm<ScheduleEventFormData>({
         name: '',
         email: '',
@@ -50,6 +52,10 @@ const ScheduleEvent: React.FC = () => {
             navigate(`/success?name=${response.name}&email=${response.email}&date=${response.date}`);
         }
     };
+
+    useEffect(() => {
+        console.log(params);
+    }, [params])
 
     return (
         <Layout title='Enter Details'>
